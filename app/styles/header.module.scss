@@ -1,0 +1,52 @@
+@import 'main.module.scss';
+
+.headerContainer{
+    width: 100%;
+    margin-top: 60px;
+    height: calc(100vh - 60px);
+    background:linear-gradient(45deg,$color1,$color2);
+    display: flex;
+    flex-direction: row;
+}
+
+.left{
+    border: solid red 1px;
+    color: blue;
+    width: 50%;
+    display: flex;
+    align-items: center;
+    padding-left: 150px;
+
+}
+.right{
+    width: 50%;
+    position: relative;
+}
+.photoProfile{
+    width: 500px;
+    height: auto;
+    position: absolute;
+    bottom: 0px;
+    right: 150px;
+    z-index: 20;
+}
+.cercle{
+    width: 500px;
+    height: 500px;
+    border: solid rgb(255, 255, 255,0.37) 37px;
+    border-radius: 100%;
+    z-index: 1;
+    position: absolute;
+    right: 150px;
+    top: 100px;
+}
+.text1{
+    color: $btnColor;
+    font-size: 37px;
+    font-family: var(--font-poppins);
+}
+.nom{
+    color:#302E2E;
+    font-family: var(--font-poppinsTini);
+    font-weight: 200px;
+}
