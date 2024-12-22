@@ -10,12 +10,11 @@
 }
 
 .left{
-    border: solid red 1px;
-    color: blue;
     width: 50%;
     display: flex;
-    align-items: center;
     padding-left: 150px;
+    flex-direction: column;
+    justify-content: center;
 
 }
 .right{
@@ -43,10 +42,34 @@
 .text1{
     color: $btnColor;
     font-size: 37px;
-    font-family: var(--font-poppins);
+    font-family: var(--font-roboto);
 }
 .nom{
     color:#302E2E;
+    font-family: var(--font-roboto);
+    font-weight: 800px;
+}
+.textDescript{
+    color: #333333;
     font-family: var(--font-poppinsTini);
-    font-weight: 200px;
+    font-size: 16px;
+    margin-bottom: 30px;
+}
+.titre{
+    color: $btnColor;
+    font-family: var(--font-poppinsTini);
+    font-size: 20px;
+    margin: 12px 0px 12px 0px;
+}
+.btn{
+    background-color: $btnColor;
+    width: 200px;
+    text-align: center;
+    padding: 18px;
+    color: white;
+    border-radius: 10px;
+    cursor: pointer;
+}
+.btn:hover{
+    background-color:#0b6b6b;
 }
