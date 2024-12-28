@@ -1,0 +1,20 @@
+.swiper-button-next{
+    position: absolute;
+    top: 60px;
+    right: -40px;
+    color: #0D9A9A;
+    font-size: 45px;
+    border: none;
+    background-color: white;
+    cursor: pointer;
+}
+.swiper-button-prev{
+    position: absolute;
+    top: 60px;
+    left: -40px;
+    color: #0D9A9A;
+    font-size: 45px;
+    border: none;
+    background-color: white;
+    cursor: pointer;
+}

@@ -1,0 +1,61 @@
+$color1:#eeeee7;
+$color2:#F6FEFE;
+$title1:#302E2E;
+$btnColor:#0D9A9A;
+
+.main{
+    width: 100%;
+    padding:100px 150px 50px 150px;
+    background-color: #fcfdfd;
+}
+
+.title{
+    font-family: var(--font-poppinsTini);
+    color:#302E2E;
+    margin-bottom: 35px;
+    font-weight: 600;
+    width: 100%;
+    text-align: center;
+}
+
+.textIntro{
+    width: 90%;
+    text-align: center;
+    margin: auto;
+    font-size: 14.5px;
+    text-align: center;
+    font-family: var(--font-poppinsTini);
+    color:#232222;
+}
+
+.tabHeaderMain{
+    width: 50%;
+    margin: auto;
+    border-bottom: solid 1px #e5e5e5;
+    margin-top: 50px;
+    padding: 15px;
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+    justify-content: center;
+}
+.headerBoxTitleContainer{
+    background-color: #f5f3f3;
+    padding: 10px;
+    border-radius: 25px;
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    transition: ease-in-out 0.5s;
+}
+.tabActive{
+    background-color: #0D9A9A;
+    color: white;
+    box-shadow: 1px 1px 10px rgba(62, 62, 62, 0.5);
+
+}
+
+// <div onClick={()=>setActiveTab(1)} className={`${Styles.headerBoxTitleContainer} ${Styles.tabActive}`}><MdOutlineDevices /> 

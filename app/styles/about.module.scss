@@ -1,0 +1,39 @@
+$color1:#eeeee7;
+$color2:#F6FEFE;
+$title1:#302E2E;
+$btnColor:#0D9A9A;
+
+.main{
+    width: 100%;
+    padding:100px 150px 50px 150px;
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+}
+
+.left{
+    //border: solid 1px red;
+    width: 50%;
+    overflow: hidden;
+    position: relative;
+}
+.right{
+    width: 50%;
+}
+.title{
+    font-family: var(--font-poppinsTini);
+    color:#302E2E;
+    margin-bottom: 35px;
+}
+
+.texte{
+    color: #272626;
+    font-family: var(--font-poppinsTini);
+    font-size: 16px;
+    margin-bottom: 30px;
+}
+.picture{
+    height: 100%;
+    width: auto;
+    position: absolute;
+}

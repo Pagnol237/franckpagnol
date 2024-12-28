@@ -14,7 +14,7 @@ import { motion } from "motion/react";
 const roboto = Roboto({
     subsets:['latin'],
     weight:'500',
-    variable: '--font-poppins'
+    variable: '--font-roboto',
 })
 
 const poppinsTini = Poppins({
@@ -29,7 +29,7 @@ function Header() {
         <div className={Styles.left}>
             <div  className={Styles.text1}>Salut, je suis <span className={Styles.nom}>Franck Pagnol</span></div>
             <div className={Styles.titre}>Développeur fullstack & designer graphique</div>
-            <div className={Styles.textDescript}>Je suis développeur fullstack avec plusieurs années d'expérience. Mes compétences couvrent la création de sites web, le développement d'applications web et le design graphique</div>
+            <div className={Styles.textDescript}>Je suis développeur fullstack avec plusieurs années d'expérience. Mes compétences couvrent la création de sites web, le développement de logiciel, d'applications web,mobile et le design graphique</div>
             
                 <Link href='/'><div className={Styles.btn}>Contactez moi </div></Link>
            
