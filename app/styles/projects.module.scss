@@ -55,7 +55,68 @@ $btnColor:#0D9A9A;
     background-color: #0D9A9A;
     color: white;
     box-shadow: 1px 1px 10px rgba(62, 62, 62, 0.5);
-
 }
 
-// <div onClick={()=>setActiveTab(1)} className={`${Styles.headerBoxTitleContainer} ${Styles.tabActive}`}><MdOutlineDevices /> 
+.DesvRealisationMain{
+    width: 100%;
+}
+
+.imagesBox{
+    border-radius: 15px;
+    overflow: hidden;
+    width: 100%;
+    height: auto;
+}
+.box{
+    position: relative;
+    transition: ease-in-out 0.5s;
+    
+ 
+}
+.redirectionIconBox{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position : absolute;
+    bottom: 20px;
+    gap: 10px;
+}
+
+.redirectionIconContainer{
+    width: 35px;
+    height: 35px;
+    border-radius: 25px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #e4e4e4;
+    transition: ease-in-out 0.5s;
+}
+
+.redirectionIconContainer:hover{
+    background-color: #0D9A9A;
+    color: white;
+}
+
+.box:hover .imagesBox{
+    transform: scale(1.2);
+    cursor: pointer;
+    transition: ease-in-out 0.5s;
+}
+.swiper{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 15px;
+    font-size: 35px;
+    color: #0d0d0d;
+    opacity: 0.2;
+}
+
+.designIm{
+    overflow: hidden;
+    border-radius: 15px;
+    margin-top: 15px;
+}

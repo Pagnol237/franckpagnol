@@ -5,8 +5,8 @@ import data from '../data/skil'
 import SkillsBox from './SkillsBox';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import { Navigation, Pagination, Keyboard } from 'swiper/modules';
-import 'swiper/scss';
-import 'swiper/scss/navigation';
+import 'swiper/css';
+import 'swiper/css/navigation';
 import '../styles/app.css';
 
 

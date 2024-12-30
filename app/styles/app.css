@@ -18,3 +18,25 @@
     background-color: white;
     cursor: pointer;
 }
+
+
+.swiper-button-next1{
+    position: absolute;
+    top: -50px;
+    right: -140px;
+    color: #0D9A9A;
+    font-size: 45px;
+    border: none;
+    background-color: white;
+    cursor: pointer;
+}
+.swiper-button-prev1{
+    position: absolute;
+    top: 60px;
+    left: -40px;
+    color: #0D9A9A;
+    font-size: 45px;
+    border: none;
+    background-color: white;
+    cursor: pointer;
+}
