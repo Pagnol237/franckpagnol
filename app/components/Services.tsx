@@ -1,9 +1,11 @@
 'use client'
-import React,{useState} from 'react'
+import React from 'react'
+import { useEffect, useState } from "react";
 import Styles from '../styles/services.module.scss';
 import ServicesBox from './ServicesBox';
 import { Roboto,Poppins } from 'next/font/google'
 import data from '../data/infos';
+import {easeIn, motion, spring} from 'framer-motion'
 
 
 const roboto = Roboto({
@@ -45,19 +47,52 @@ function Services() {
       src:'./images/icone4.png',
     }
   ])
+
+  
+      const [isClient, setIsClient] = useState(false);
+  
+      useEffect(() => {
+        setIsClient(true); // Assure que le code s'exécute côté client
+      }, []);
+
+
+      const variants = {
+        view:(index:any)=>({
+          y:0,
+          opacity:1,
+          transition:{
+            delay:index*0.2,
+            type: spring,
+            stiffness:300,
+            easeIn:easeIn,
+            duration:0.3
+          }
+        }),
+        hidden:{
+          y:40,
+          opacity:0,
+        }
+      
+      }
+
   return (
     <div className={`${Styles.main} ${roboto.variable} ${poppinsTini.variable}`}>
-      <h2 className={Styles.title}>Mes Services</h2>
+      <motion.h2 
+        className={Styles.title}
+        initial={{opacity:0,y:-50}} whileInView={{opacity:1,y:0}} transition={{ease:easeIn,duration:0.5,delay:0}}
+      >
+          Mes Services
+      </motion.h2>
       <div className={Styles.boxMain}>
         {data.map((item,index)=>(
-          <div key={index}>
+          <motion.div custom={index} variants={variants} initial="hidden" whileInView="view" key={index}>
               <ServicesBox
               id={item.id}
               title={item.title}
               description={item.description}
               src={item.src}
               />
-          </div>
+          </motion.div>
         ))}
       </div>
        

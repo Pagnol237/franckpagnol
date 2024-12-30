@@ -6,6 +6,7 @@ import About from "./components/About";
 import Services from "./components/Services";
 import Skills from "./components/Skills";
 import Projects from "./components/Projects";
+import Temoignage from "./components/Temoignage";
 
 
 export default function Home() {
@@ -17,6 +18,7 @@ export default function Home() {
       <Services/>
       <Skills/>
       <Projects/>
+      <Temoignage/>
     </div>
   );
 }

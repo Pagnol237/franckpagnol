@@ -1,10 +1,12 @@
 'use client'
 import React from 'react'
+import { useEffect, useState } from "react";
 import Styles from '../styles/skills.module.scss';
 import data from '../data/skil'
 import SkillsBox from './SkillsBox';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import { Navigation, Pagination, Keyboard } from 'swiper/modules';
+import {easeIn, motion, spring} from 'framer-motion'
 import 'swiper/css';
 import 'swiper/css/navigation';
 import '../styles/app.css';
@@ -17,11 +19,38 @@ import { BsChevronRight,BsChevronLeft } from "react-icons/bs"
 
 function Skills() {
 
+   const [isClient, setIsClient] = useState(false);
+    
+        useEffect(() => {
+          setIsClient(true); // Assure que le code s'exécute côté client
+        }, []);
+  
+  
+        const variants = {
+          view:(index:number)=>({
+            opacity:1,
+            scale:1,
+            transition:{
+              delay:index*0.1,
+              type: spring,
+              stiffness:400,
+              easeIn:easeIn,
+              duration:0.1
+            }
+          }),
+          hidden:{
+            opacity:0,
+            scale:0,
+          }
+        
+        }
   
 
   return (
     <div className={Styles.main}>
-        <h2 className={Styles.title}>Mes compétences</h2>
+        <motion.h2 className={Styles.title} initial={{opacity:0,y:-50}} whileInView={{opacity:1,y:0}} transition={{ease:easeIn,duration:0.5,delay:0}}>
+          Mes compétences
+        </motion.h2>
         <div className={Styles.boxMain}>
 
             <Swiper
@@ -37,13 +66,15 @@ function Skills() {
             >
               {data.map((items,index)=>(
                 <SwiperSlide key={index}>
-                  <SkillsBox
-                    id={items.id}
-                    name={items.name}
-                    color={items.color}
-                    taille={items.taille}
-                    pic={items.pic}
-                    />
+                  <motion.div custom={index} variants={variants} initial="hidden" whileInView="view" key={index}>
+                    <SkillsBox
+                      id={items.id}
+                      name={items.name}
+                      color={items.color}
+                      taille={items.taille}
+                      pic={items.pic}
+                      />
+                  </motion.div>
                 </SwiperSlide>
               ))}
 
