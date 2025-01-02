@@ -16,10 +16,10 @@ import UseScreenWidth from './UseScreenWidth';
 
 function DesignRealisation() {
   
-  // recuperer la lageur du l'écran du navigateur
+  const screenWidth = UseScreenWidth();// recuperer la lageur du l'écran du navigateur
   const [isClient, setIsClient] = useState(false);
-  const [screenWidth, setScreenWidth] = useState<number>(1024);
-
+  if (screenWidth === null) return null;
+  
       
           useEffect(() => {
             setIsClient(true); // Assure que le code s'exécute côté client
@@ -47,7 +47,7 @@ function DesignRealisation() {
     <div className={Styles.DesvRealisationMain}>
             <Swiper
               spaceBetween={20}
-              slidesPerView={(screenWidth ?? 1024) <= 991 ? 2 : 5}
+              slidesPerView={screenWidth <= 991 ? 2 : 5}
               onSlideChange={() => console.log('slide change')}
               onSwiper={(swiper) => console.log(swiper)}
               navigation={true} modules={[Navigation]}
