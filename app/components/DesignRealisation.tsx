@@ -39,6 +39,7 @@ function DesignRealisation() {
             }
           
           }
+          if (screenWidth === null) return null;
   return (
     <div className={Styles.DesvRealisationMain}>
             <Swiper

@@ -41,6 +41,7 @@ function DevRealisation() {
           }
         
         }
+        if (screenWidth === null) return null;
   
   return (
     <div className={Styles.DesvRealisationMain}>
