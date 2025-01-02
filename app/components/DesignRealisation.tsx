@@ -21,7 +21,9 @@ function DesignRealisation() {
   if (screenWidth === null) return null;
   
       
-
+       {/*   useEffect(() => {
+            setIsClient(true); // Assure que le code s'exécute côté client
+          }, []);*/}
     
     
           const variants = {
