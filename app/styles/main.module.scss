@@ -36,3 +36,48 @@ $btnColor:#0D9A9A;
     font-size: 18px;
     color: #000000;
 }
+
+.toggleBar{
+    float: right;
+    height: 60px;
+    font-size: 35px;
+    line-height: 60px;
+    cursor: pointer;
+    display: none;
+}
+
+// style for tablet and mobile
+
+@media only screen and (max-width: 991px) {
+    .navContainer{
+        padding: 0px 0px 0px 0px;
+        width: 100%;
+    }
+    .lien{
+        width: 100%;
+        padding: 0px;
+        margin: 0px;
+        text-align: center;
+        color: white;
+        border-bottom: solid 1px #0c8888;
+    }
+    .menu{
+       width: 100%; 
+        background-color: #0D9A9A;
+       display: flex;
+       flex-direction: column;
+       height: auto;
+       padding: 0px;
+       margin: 0px;
+       display: none;
+    }
+    .toggleBar{
+        display: block;
+        color: $btnColor;
+        margin-right: 30px;
+    }
+    .lien:hover{
+        font-size: 15px;
+        color: white;
+    }
+}

@@ -98,3 +98,11 @@ $btnColor:#0D9A9A;
     -webkit-text-stroke: 1px rgb(255, 255, 255);
     font-size: 35px;
 }
+
+@media only screen and (max-width: 991px){
+    .main{
+        width: 100%;
+        padding:100px 30px 50px 30px;
+        background-color: #fcfdfd;
+    }
+}

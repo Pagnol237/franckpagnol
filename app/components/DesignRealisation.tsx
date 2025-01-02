@@ -9,12 +9,13 @@ import { Navigation } from 'swiper/modules';
 import 'swiper/css';
 import 'swiper/css/navigation';
 import '../styles/app.css'
-
 import { BsChevronRight,BsChevronLeft } from "react-icons/bs"
 import DesignBox from './DesignBox';
 import {easeIn, motion, spring} from 'framer-motion'
+import UseScreenWidth from './UseScreenWidth';
 
 function DesignRealisation() {
+  const screenWidth = UseScreenWidth();// recuperer la lageur du l'écran du navigateur
   const [isClient, setIsClient] = useState(false);
       
           useEffect(() => {
@@ -25,6 +26,7 @@ function DesignRealisation() {
           const variants = {
             view:(index:any)=>({
               opacity:1,
+              x:0,
               transition:{
                 delay:index*0.1,
                 easeIn:easeIn,
@@ -33,6 +35,7 @@ function DesignRealisation() {
             }),
             hidden:{
               opacity:0,
+              x:-50,
             }
           
           }
@@ -40,7 +43,7 @@ function DesignRealisation() {
     <div className={Styles.DesvRealisationMain}>
             <Swiper
               spaceBetween={20}
-              slidesPerView={4}
+              slidesPerView={screenWidth<=991?2:5}
               onSlideChange={() => console.log('slide change')}
               onSwiper={(swiper) => console.log(swiper)}
               navigation={true} modules={[Navigation]}

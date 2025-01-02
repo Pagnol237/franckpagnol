@@ -120,3 +120,11 @@ $btnColor:#0D9A9A;
     border-radius: 15px;
     margin-top: 15px;
 }
+
+//styles for smartphone an tablette
+
+@media only screen and (max-width: 991px){
+    .main{
+        padding:100px 30px 50px 30px;
+    }
+}

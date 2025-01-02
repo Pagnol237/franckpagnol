@@ -7,6 +7,7 @@ import Services from "./components/Services";
 import Skills from "./components/Skills";
 import Projects from "./components/Projects";
 import Temoignage from "./components/Temoignage";
+import Footer from "./components/Footer";
 
 
 export default function Home() {
@@ -19,6 +20,7 @@ export default function Home() {
       <Skills/>
       <Projects/>
       <Temoignage/>
+      <Footer/>
     </div>
   );
 }

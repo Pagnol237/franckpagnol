@@ -10,6 +10,7 @@ import {easeIn, motion, spring} from 'framer-motion'
 import 'swiper/css';
 import 'swiper/css/navigation';
 import '../styles/app.css';
+import UseScreenWidth from './UseScreenWidth';
 
 
 import { BsChevronRight,BsChevronLeft } from "react-icons/bs"
@@ -18,8 +19,8 @@ import { BsChevronRight,BsChevronLeft } from "react-icons/bs"
 
 
 function Skills() {
-
-   const [isClient, setIsClient] = useState(false);
+  const screenWidth = UseScreenWidth();
+  const [isClient, setIsClient] = useState(false);
     
         useEffect(() => {
           setIsClient(true); // Assure que le code s'exécute côté client
@@ -44,10 +45,11 @@ function Skills() {
           }
         
         }
-  
+
 
   return (
     <div className={Styles.main}>
+     
         <motion.h2 className={Styles.title} initial={{opacity:0,y:-50}} whileInView={{opacity:1,y:0}} transition={{ease:easeIn,duration:0.5,delay:0}}>
           Mes compétences
         </motion.h2>
@@ -55,7 +57,7 @@ function Skills() {
 
             <Swiper
               spaceBetween={4}
-              slidesPerView={5}
+              slidesPerView={screenWidth<=991?2:5}
               onSlideChange={() => console.log('slide change')}
               onSwiper={(swiper) => console.log(swiper)}
               modules={[Navigation]}

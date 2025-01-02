@@ -37,3 +37,32 @@ $btnColor:#0D9A9A;
     width: auto;
     position: absolute;
 }
+
+// style for phone and tablette
+
+@media only screen and (max-width: 991px){
+    .main{
+        width: 100%;
+        padding:100px 30px 50px 30px;
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    .left{
+        display: none;
+    }
+    .right{
+        width: 100%;
+    }
+    .title{
+        width: 100%;
+        text-align: center;
+    }
+    .texte{
+        width: 100%;
+        text-align: center;
+    }
+
+    
+}

@@ -7,13 +7,14 @@ import { Navigation } from 'swiper/modules';
 import 'swiper/css';
 import 'swiper/css/navigation';
 import '../styles/app.css'
-
 import { BsChevronRight,BsChevronLeft } from "react-icons/bs"
 import DevBox from './DevBox';
 import {easeIn, motion, spring} from 'framer-motion'
+import UseScreenWidth from './UseScreenWidth';
 
 function DevRealisation() {
 
+  const screenWidth = UseScreenWidth();// recuperer la lageur du l'écran du navigateur
   const [isClient, setIsClient] = useState(false);
     
         useEffect(() => {
@@ -44,7 +45,7 @@ function DevRealisation() {
     <div className={Styles.DesvRealisationMain}>
             <Swiper
               spaceBetween={4}
-              slidesPerView={4}
+              slidesPerView={screenWidth<=991?2:5}
               onSlideChange={() => console.log('slide change')}
               onSwiper={(swiper) => console.log(swiper)}
               navigation={true} modules={[Navigation]}

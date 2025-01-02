@@ -44,3 +44,18 @@ $btnColor:#0D9A9A;
     padding: 90px;
 }
 
+//styles for smartphone an tablette
+
+@media only screen and (max-width: 991px){
+    .main{
+        width: 100%;
+        padding:100px 30px 50px 30px;
+        background-color: #ffffff;
+    }
+
+    .boxMain{
+        width: 80%;
+        margin: auto;
+        position: relative;
+    }
+}
