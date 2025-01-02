@@ -40,7 +40,7 @@ export default function RootLayout({
   return (
     <html lang="fr">
       <head>
-        <meta name="viewport" content="width=device-width,user-scalable=no"  />
+      <meta name="viewport" content="width=device-width, initial-scale=1"/>
       </head>
       <body className={`${geistSans.variable} ${geistMono.variable} ${poppinsTini.variable} ${roboto.variable}`}>
         {children}
