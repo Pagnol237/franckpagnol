@@ -11,8 +11,6 @@ import 'swiper/css';
 import 'swiper/css/navigation';
 import '../styles/app.css';
 import UseScreenWidth from './UseScreenWidth';
-
-
 import { BsChevronRight,BsChevronLeft } from "react-icons/bs"
 
 
@@ -57,7 +55,7 @@ function Skills() {
 
             <Swiper
               spaceBetween={4}
-              slidesPerView={screenWidth<=991?2:4}
+              slidesPerView={screenWidth<=991?2:5}
               onSlideChange={() => console.log('slide change')}
               onSwiper={(swiper) => console.log(swiper)}
               modules={[Navigation]}
