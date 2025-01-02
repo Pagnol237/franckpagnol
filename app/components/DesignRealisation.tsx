@@ -15,8 +15,11 @@ import {easeIn, motion, spring} from 'framer-motion'
 import UseScreenWidth from './UseScreenWidth';
 
 function DesignRealisation() {
-  const screenWidth = UseScreenWidth();// recuperer la lageur du l'écran du navigateur
+  
+  // recuperer la lageur du l'écran du navigateur
   const [isClient, setIsClient] = useState(false);
+  const [screenWidth, setScreenWidth] = useState<number>(1024);
+
       
           useEffect(() => {
             setIsClient(true); // Assure que le code s'exécute côté client
@@ -39,7 +42,7 @@ function DesignRealisation() {
             }
           
           }
-          if (screenWidth === null) return null;
+  
   return (
     <div className={Styles.DesvRealisationMain}>
             <Swiper
