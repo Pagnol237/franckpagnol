@@ -1,3 +1,4 @@
+'use client'
 import React from 'react'
 import Styles from '../styles/skills.module.scss';
 import Image from 'next/image';

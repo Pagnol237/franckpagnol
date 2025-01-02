@@ -1,3 +1,4 @@
+'use client'
 import React from 'react'
 import Styles from '../styles/footer.module.scss'
 import { ImLinkedin2 } from "react-icons/im";

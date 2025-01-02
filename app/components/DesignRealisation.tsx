@@ -1,5 +1,5 @@
 
-
+'use client'
 import React from 'react'
 import data from '../data/design'
 import Styles from '../styles/projects.module.scss'
