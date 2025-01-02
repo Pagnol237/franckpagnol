@@ -58,7 +58,7 @@ function Skills() {
 
             <Swiper
               spaceBetween={4}
-              slidesPerView={screenWidth<=991?2:5}
+              slidesPerView={screenWidth<=991?2:4}
               onSlideChange={() => console.log('slide change')}
               onSwiper={(swiper) => console.log(swiper)}
               modules={[Navigation]}

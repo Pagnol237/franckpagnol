@@ -47,7 +47,7 @@ function DesignRealisation() {
     <div className={Styles.DesvRealisationMain}>
             <Swiper
               spaceBetween={20}
-              slidesPerView={screenWidth <= 991 ? 2 : 5}
+              slidesPerView={screenWidth <= 991 ? 2 : 4}
               onSlideChange={() => console.log('slide change')}
               onSwiper={(swiper) => console.log(swiper)}
               navigation={true} modules={[Navigation]}
