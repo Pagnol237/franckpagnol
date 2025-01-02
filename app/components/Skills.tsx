@@ -49,7 +49,7 @@ function Skills() {
 
   return (
     <div className={Styles.main}>
-     
+        {screenWidth}
         <motion.h2 className={Styles.title} initial={{opacity:0,y:-50}} whileInView={{opacity:1,y:0}} transition={{ease:easeIn,duration:0.5,delay:0}}>
           Mes compétences
         </motion.h2>
