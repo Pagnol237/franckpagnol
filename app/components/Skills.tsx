@@ -21,6 +21,7 @@ import { BsChevronRight,BsChevronLeft } from "react-icons/bs"
 function Skills() {
   const screenWidth = UseScreenWidth();
   const [isClient, setIsClient] = useState(false);
+  if (screenWidth === null) return null;
     
         useEffect(() => {
           setIsClient(true); // Assure que le code s'exécute côté client
