@@ -2,10 +2,8 @@
 import React, { useState, useEffect } from "react";
 
 const UseScreenWidth = () => {
-  if (typeof window !== "undefined") {
-    // Code dépendant de 'window'
-  }
-  const [screenWidth, setScreenWidth] = useState(window.innerWidth);
+const initialSize:number = window.innerWidth;
+  const [screenWidth, setScreenWidth] = useState(initialSize);
 
   useEffect(() => {
     const handleResize = () => setScreenWidth(window.innerWidth);
