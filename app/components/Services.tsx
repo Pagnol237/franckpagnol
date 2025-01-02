@@ -6,6 +6,7 @@ import ServicesBox from './ServicesBox';
 import { Roboto,Poppins } from 'next/font/google'
 import data from '../data/infos';
 import {easeIn, motion, spring} from 'framer-motion'
+import '../globals.css';
 
 
 const roboto = Roboto({
@@ -76,26 +77,27 @@ function Services() {
       }
 
   return (
-    <div className={`${Styles.main} ${roboto.variable} ${poppinsTini.variable}`}>
-      <motion.h2 
-        className={Styles.title}
-        initial={{opacity:0,y:-50}} whileInView={{opacity:1,y:0}} transition={{ease:easeIn,duration:0.5,delay:0}}
-      >
-          Mes Services
-      </motion.h2>
-      <div className={Styles.boxMain}>
-        {data.map((item,index)=>(
-          <motion.div custom={index} variants={variants} initial="hidden" whileInView="view" key={index}>
-              <ServicesBox
-              id={item.id}
-              title={item.title}
-              description={item.description}
-              src={item.src}
-              />
-          </motion.div>
-        ))}
+    <div id="section3">
+      <div className={`${Styles.main} ${roboto.variable} ${poppinsTini.variable}`}>
+        <motion.h2 
+          className={Styles.title}
+          initial={{opacity:0,y:-50}} whileInView={{opacity:1,y:0}} transition={{ease:easeIn,duration:0.5,delay:0}}
+        >
+            Mes Services
+        </motion.h2>
+        <div className={Styles.boxMain}>
+          {data.map((item,index)=>(
+            <motion.div custom={index} variants={variants} initial="hidden" whileInView="view" key={index}>
+                <ServicesBox
+                id={item.id}
+                title={item.title}
+                description={item.description}
+                src={item.src}
+                />
+            </motion.div>
+          ))}
+        </div>
       </div>
-       
     </div>
   )
 }

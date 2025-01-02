@@ -15,9 +15,9 @@ const website = [
         git:'https://github.com/Pagnol237/bonjour_infotech',
     },
     {
-        image: Pic3,
-        url: 'https://siteweb-cades.vercel.app/', 
-        git:'https://github.com/Pagnol237/siteweb-cades',
+        image: Pic1,
+        url: 'https://pagnol237.github.io/event-web-site/', 
+        git:'https://github.com/Pagnol237/event-web-site?tab=readme-ov-file',
     },
     {
         image: Pic4,

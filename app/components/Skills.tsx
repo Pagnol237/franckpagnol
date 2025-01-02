@@ -12,6 +12,7 @@ import 'swiper/css/navigation';
 import '../styles/app.css';
 import UseScreenWidth from './UseScreenWidth';
 import { BsChevronRight,BsChevronLeft } from "react-icons/bs"
+import '../globals.css';
 
 
 
@@ -47,42 +48,44 @@ function Skills() {
 
 
   return (
-    <div className={Styles.main}>
-        <motion.h2 className={Styles.title} initial={{opacity:0,y:-50}} whileInView={{opacity:1,y:0}} transition={{ease:easeIn,duration:0.5,delay:0}}>
-          Mes compétences
-        </motion.h2>
-        <div className={Styles.boxMain}>
+    <div id="section4">
+      <div className={Styles.main}>
+          <motion.h2 className={Styles.title} initial={{opacity:0,y:-50}} whileInView={{opacity:1,y:0}} transition={{ease:easeIn,duration:0.5,delay:0}}>
+            Mes compétences
+          </motion.h2>
+          <div className={Styles.boxMain}>
 
-            <Swiper
-              spaceBetween={4}
-              slidesPerView={screenWidth<=991?2:5}
-              onSlideChange={() => console.log('slide change')}
-              onSwiper={(swiper) => console.log(swiper)}
-              modules={[Navigation]}
-              navigation={{
-                nextEl: '.swiper-button-next',
-                prevEl: '.swiper-button-prev',
-              }}
-            >
-              {data.map((items,index)=>(
-                <SwiperSlide key={index}>
-                  <motion.div custom={index} variants={variants} initial="hidden" whileInView="view" key={index}>
-                    <SkillsBox
-                      id={items.id}
-                      name={items.name}
-                      color={items.color}
-                      taille={items.taille}
-                      pic={items.pic}
-                      />
-                  </motion.div>
-                </SwiperSlide>
-              ))}
+              <Swiper
+                spaceBetween={4}
+                slidesPerView={screenWidth<=991?2:5}
+                onSlideChange={() => console.log('slide change')}
+                onSwiper={(swiper) => console.log(swiper)}
+                modules={[Navigation]}
+                navigation={{
+                  nextEl: '.swiper-button-next',
+                  prevEl: '.swiper-button-prev',
+                }}
+              >
+                {data.map((items,index)=>(
+                  <SwiperSlide key={index}>
+                    <motion.div custom={index} variants={variants} initial="hidden" whileInView="view" key={index}>
+                      <SkillsBox
+                        id={items.id}
+                        name={items.name}
+                        color={items.color}
+                        taille={items.taille}
+                        pic={items.pic}
+                        />
+                    </motion.div>
+                  </SwiperSlide>
+                ))}
 
 
-            </Swiper>
-          <button className='swiper-button-prev'><BsChevronLeft /></button>
-          <button className='swiper-button-next'><BsChevronRight /></button>
-        </div>
+              </Swiper>
+            <button className='swiper-button-prev'><BsChevronLeft /></button>
+            <button className='swiper-button-next'><BsChevronRight /></button>
+          </div>
+      </div>
     </div>
   )
 }

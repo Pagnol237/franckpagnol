@@ -46,6 +46,8 @@ $btnColor:#0D9A9A;
     display: none;
 }
 
+
+
 // style for tablet and mobile
 
 @media only screen and (max-width: 991px) {
@@ -69,7 +71,6 @@ $btnColor:#0D9A9A;
        height: auto;
        padding: 0px;
        margin: 0px;
-       display: none;
     }
     .toggleBar{
         display: block;
@@ -80,4 +81,15 @@ $btnColor:#0D9A9A;
         font-size: 15px;
         color: white;
     }
+
+    .off{
+        visibility: hidden;
+        transition: 1s ease-out;
+        opacity: 0 ;
+      }
+      .on{
+        visibility: visible;
+        transition: 0.5s ease-in;
+        opacity: 1;
+      }
 }
