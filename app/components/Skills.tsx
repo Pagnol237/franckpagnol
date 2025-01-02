@@ -23,10 +23,7 @@ function Skills() {
   const [isClient, setIsClient] = useState(false);
   if (screenWidth === null) return null;
     
-        useEffect(() => {
-          setIsClient(true); // Assure que le code s'exécute côté client
-        }, []);
-  
+
   
         const variants = {
           view:(index:number)=>({
